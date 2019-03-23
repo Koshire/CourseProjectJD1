@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="course_project@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>10.6</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="country">
+      <ObjectId>16424</ObjectId>
+      <StateNumber>599</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="course_project">
+      <ObjectId>16576</ObjectId>
+      <StateNumber>766</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>1298</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|17464|17466|1
+sequence|table|17474|17476|1
+sequence|table|17484|17486|1
+sequence|table|17502|17504|1
+sequence|table|17566|17568|1
+sequence|table|17588|17590|1
+</Relations>
+    </database>
+    <database id="4" parent="1" name="coursep_project">
+      <ObjectId>16575</ObjectId>
+      <StateNumber>761</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="postgres">
+      <ObjectId>13058</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>553</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="6" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="12" parent="3" name="information_schema">
+      <ObjectId>12768</ObjectId>
+      <StateNumber>353</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="13" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>350</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="14" parent="3" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+      <StateNumber>113</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="15" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="16" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+      <StateNumber>113</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>351</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>1299</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="18" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="19" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="20" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="21" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="22" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="24" parent="3" name="plpgsql">
+      <ObjectId>13044</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>505</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="25" parent="17" name="course_id_seq">
+      <ObjectId>17484</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1220</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="26" parent="17" name="course_type_id_seq">
+      <ObjectId>17474</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1217</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="27" parent="17" name="course_user_id_seq">
+      <ObjectId>17502</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1223</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="28" parent="17" name="knowlege_base_comment_id_seq">
+      <ObjectId>17588</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1240</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="29" parent="17" name="knowlege_base_id_seq">
+      <ObjectId>17566</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1237</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="30" parent="17" name="role_id_seq">
+      <ObjectId>17464</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1214</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="31" parent="17" name="blocklist">
+      <ObjectId>17524</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1226</StateNumber>
+    </table>
+    <table id="32" parent="17" name="course">
+      <ObjectId>17486</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1237</StateNumber>
+    </table>
+    <table id="33" parent="17" name="course_student">
+      <ObjectId>17535</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1231</StateNumber>
+    </table>
+    <table id="34" parent="17" name="course_teacher">
+      <ObjectId>17551</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1234</StateNumber>
+    </table>
+    <table id="35" parent="17" name="course_type">
+      <ObjectId>17476</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1220</StateNumber>
+    </table>
+    <table id="36" parent="17" name="course_user">
+      <ObjectId>17504</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1265</StateNumber>
+    </table>
+    <table id="37" parent="17" name="knowlege_base">
+      <ObjectId>17568</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1240</StateNumber>
+    </table>
+    <table id="38" parent="17" name="knowlege_base_comment">
+      <ObjectId>17590</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1240</StateNumber>
+    </table>
+    <table id="39" parent="17" name="role">
+      <ObjectId>17466</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1223</StateNumber>
+    </table>
+    <column id="40" parent="31" name="user_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1280</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="41" parent="31" name="blocklist_pk">
+      <ObjectId>17622</ObjectId>
+      <StateNumber>1282</StateNumber>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="31" name="blocklist_pk">
+      <ObjectId>17623</ObjectId>
+      <StateNumber>1282</StateNumber>
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>blocklist_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="43" parent="31" name="blocklist_user_id_fkey">
+      <ObjectId>17530</ObjectId>
+      <StateNumber>1226</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17504</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course_user</RefTableName>
+      <RefKeyName>course_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="44" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1220</StateNumber>
+      <DefaultExpression>nextval(&apos;course_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="45" parent="32" name="type_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1220</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="46" parent="32" name="start_date">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>1220</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="47" parent="32" name="duration_hours">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1220</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="48" parent="32" name="name">
+      <Position>5</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1220</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="32" name="description">
+      <Position>6</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1220</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="32" name="plan">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1220</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="51" parent="32" name="course_pkey">
+      <ObjectId>17495</ObjectId>
+      <StateNumber>1220</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="32" name="course_pkey">
+      <ObjectId>17496</ObjectId>
+      <StateNumber>1220</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>course_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="53" parent="32" name="course_type_id_fkey">
+      <ObjectId>17497</ObjectId>
+      <StateNumber>1220</StateNumber>
+      <ColNames>type_id</ColNames>
+      <RefTableId>17476</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course_type</RefTableName>
+      <RefKeyName>course_type_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="54" parent="33" name="cource_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1231</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="55" parent="33" name="user_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1231</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="56" parent="33" name="result">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1231</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="57" parent="33" name="course_student_pkey">
+      <ObjectId>17539</ObjectId>
+      <StateNumber>1231</StateNumber>
+      <ColNames>cource_id
+user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="33" name="course_student_pkey">
+      <ObjectId>17540</ObjectId>
+      <StateNumber>1231</StateNumber>
+      <ColNames>cource_id
+user_id</ColNames>
+      <UnderlyingIndexName>course_student_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="59" parent="33" name="course_student_cource_id_fkey">
+      <ObjectId>17541</ObjectId>
+      <StateNumber>1231</StateNumber>
+      <ColNames>cource_id</ColNames>
+      <RefTableId>17486</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course</RefTableName>
+      <RefKeyName>course_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="60" parent="33" name="course_student_user_id_fkey">
+      <ObjectId>17546</ObjectId>
+      <StateNumber>1231</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17504</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course_user</RefTableName>
+      <RefKeyName>course_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="61" parent="34" name="cource_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1234</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="62" parent="34" name="user_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1234</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="63" parent="34" name="course_teacher_pkey">
+      <ObjectId>17554</ObjectId>
+      <StateNumber>1234</StateNumber>
+      <ColNames>cource_id
+user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="34" name="course_teacher_pkey">
+      <ObjectId>17555</ObjectId>
+      <StateNumber>1234</StateNumber>
+      <ColNames>cource_id
+user_id</ColNames>
+      <UnderlyingIndexName>course_teacher_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="34" name="course_teacher_cource_id_fkey">
+      <ObjectId>17556</ObjectId>
+      <StateNumber>1234</StateNumber>
+      <ColNames>cource_id</ColNames>
+      <RefTableId>17486</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course</RefTableName>
+      <RefKeyName>course_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="66" parent="34" name="course_teacher_user_id_fkey">
+      <ObjectId>17561</ObjectId>
+      <StateNumber>1234</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17504</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course_user</RefTableName>
+      <RefKeyName>course_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="67" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1217</StateNumber>
+      <DefaultExpression>nextval(&apos;course_type_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="35" name="name">
+      <Position>2</Position>
+      <DataType>varchar(16)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1292</StateNumber>
+      <DefaultExpression>&apos;Дистанционная&apos;::character varying</DefaultExpression>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="69" parent="35" name="course_type_pkey">
+      <ObjectId>17480</ObjectId>
+      <StateNumber>1217</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="70" parent="35" name="course_type_name_key">
+      <ObjectId>17482</ObjectId>
+      <StateNumber>1217</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="35" name="course_type_pkey">
+      <ObjectId>17481</ObjectId>
+      <StateNumber>1217</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>course_type_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="72" parent="35" name="course_type_name_key">
+      <ObjectId>17483</ObjectId>
+      <StateNumber>1217</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>course_type_name_key</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1223</StateNumber>
+      <DefaultExpression>nextval(&apos;course_user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="74" parent="36" name="role_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1223</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="75" parent="36" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1223</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="76" parent="36" name="first_name">
+      <Position>4</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1223</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="77" parent="36" name="middle_name">
+      <Position>5</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1223</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="78" parent="36" name="e_mail">
+      <Position>6</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1223</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="79" parent="36" name="phone">
+      <Position>7</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1265</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="80" parent="36" name="passphrase">
+      <Position>8</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1288</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="81" parent="36" name="course_user_pkey">
+      <ObjectId>17511</ObjectId>
+      <StateNumber>1265</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="82" parent="36" name="course_user_e_mail_key">
+      <ObjectId>17513</ObjectId>
+      <StateNumber>1265</StateNumber>
+      <ColNames>e_mail</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="83" parent="36" name="course_user_phone_key">
+      <ObjectId>17610</ObjectId>
+      <StateNumber>1265</StateNumber>
+      <ColNames>phone</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="84" parent="36" name="course_user_pkey">
+      <ObjectId>17512</ObjectId>
+      <StateNumber>1223</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>course_user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="85" parent="36" name="course_user_e_mail_key">
+      <ObjectId>17514</ObjectId>
+      <StateNumber>1223</StateNumber>
+      <ColNames>e_mail</ColNames>
+      <UnderlyingIndexName>course_user_e_mail_key</UnderlyingIndexName>
+    </key>
+    <key id="86" parent="36" name="course_user_phone_key">
+      <ObjectId>17611</ObjectId>
+      <StateNumber>1265</StateNumber>
+      <ColNames>phone</ColNames>
+      <UnderlyingIndexName>course_user_phone_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="87" parent="36" name="course_user_role_id_fkey">
+      <ObjectId>17517</ObjectId>
+      <StateNumber>1223</StateNumber>
+      <ColNames>role_id</ColNames>
+      <RefTableId>17466</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>role</RefTableName>
+      <RefKeyName>role_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="88" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1237</StateNumber>
+      <DefaultExpression>nextval(&apos;knowlege_base_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="89" parent="37" name="course_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1237</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="90" parent="37" name="user_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1237</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="91" parent="37" name="timestamp">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1237</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="92" parent="37" name="text">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1237</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="93" parent="37" name="knowlege_base_pkey">
+      <ObjectId>17576</ObjectId>
+      <StateNumber>1237</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="94" parent="37" name="knowlege_base_pkey">
+      <ObjectId>17577</ObjectId>
+      <StateNumber>1237</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>knowlege_base_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="95" parent="37" name="knowlege_base_course_id_fkey">
+      <ObjectId>17578</ObjectId>
+      <StateNumber>1237</StateNumber>
+      <ColNames>course_id</ColNames>
+      <RefTableId>17486</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course</RefTableName>
+      <RefKeyName>course_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="96" parent="37" name="knowlege_base_user_id_fkey">
+      <ObjectId>17583</ObjectId>
+      <StateNumber>1237</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17504</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course_user</RefTableName>
+      <RefKeyName>course_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="97" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1240</StateNumber>
+      <DefaultExpression>nextval(&apos;knowlege_base_comment_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="98" parent="38" name="knowlege_base_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1240</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="99" parent="38" name="user_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1240</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="100" parent="38" name="timestamp">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1240</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="101" parent="38" name="text">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1240</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="102" parent="38" name="knowlege_base_comment_pkey">
+      <ObjectId>17598</ObjectId>
+      <StateNumber>1240</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="103" parent="38" name="knowlege_base_comment_pkey">
+      <ObjectId>17599</ObjectId>
+      <StateNumber>1240</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>knowlege_base_comment_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="104" parent="38" name="knowlege_base_comment_knowlege_base_id_fkey">
+      <ObjectId>17600</ObjectId>
+      <StateNumber>1240</StateNumber>
+      <ColNames>knowlege_base_id</ColNames>
+      <RefTableId>17568</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>knowlege_base</RefTableName>
+      <RefKeyName>knowlege_base_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="105" parent="38" name="knowlege_base_comment_user_id_fkey">
+      <ObjectId>17605</ObjectId>
+      <StateNumber>1240</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17504</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>course_user</RefTableName>
+      <RefKeyName>course_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="106" parent="39" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1214</StateNumber>
+      <DefaultExpression>nextval(&apos;role_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="107" parent="39" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1214</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="108" parent="39" name="role_pkey">
+      <ObjectId>17470</ObjectId>
+      <StateNumber>1214</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="109" parent="39" name="role_name_key">
+      <ObjectId>17472</ObjectId>
+      <StateNumber>1214</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="110" parent="39" name="role_pkey">
+      <ObjectId>17471</ObjectId>
+      <StateNumber>1214</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="111" parent="39" name="role_name_key">
+      <ObjectId>17473</ObjectId>
+      <StateNumber>1214</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>role_name_key</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

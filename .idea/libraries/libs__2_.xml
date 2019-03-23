@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="libs (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/junit-4.10 .jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/postgresql-42.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
