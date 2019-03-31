@@ -20,7 +20,7 @@ public class CourseSave extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext()
-                .getRequestDispatcher(JspPath.get("save-course"))
+                .getRequestDispatcher(JspPath.get("course/save-course"))
                 .forward(req, resp);
     }
 

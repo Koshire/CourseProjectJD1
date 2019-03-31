@@ -14,6 +14,7 @@ public class CourseMapper implements BaseMapper<Course, CourseDto> {
     @Override
     public CourseDto mapToDto(Course entity) {
         return CourseDto.builder()
+                .id(entity.getId())
                 .type(entity.getType().getName())
                 .name(entity.getName())
                 .startdate(entity.getStartDate().toString())

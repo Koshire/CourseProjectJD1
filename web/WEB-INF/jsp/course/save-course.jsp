@@ -11,7 +11,6 @@
             <option>Extramural</option>
             <option>Distance</option>
         </select>
-        <%--<input type="text" name="type"/>--%>
     </label><br>
     <label>Name:
         <input type="text" name="name"/>

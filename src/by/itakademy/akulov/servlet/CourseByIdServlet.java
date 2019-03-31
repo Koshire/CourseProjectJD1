@@ -26,7 +26,7 @@ public class CourseByIdServlet extends HttpServlet {
             if (courseDto.isPresent()) {
                 req.setAttribute("course", courseDto.get());
                 getServletContext()
-                        .getRequestDispatcher(JspPath.get("get-course"))
+                        .getRequestDispatcher(JspPath.get("course/course-detail"))
                         .forward(req, resp);
             } else {
                 getServletContext()

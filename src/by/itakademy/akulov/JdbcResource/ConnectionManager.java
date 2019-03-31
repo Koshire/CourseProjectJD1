@@ -15,26 +15,6 @@ public class ConnectionManager {
     private static final String PASSWORD = "db.password";
     private static final String DRIVER = "db.driver";
 
-
-/*
-    static {
-        loadDriver();
-    }
-
-    @SneakyThrows
-    private static void loadDriver() {
-        Class.forName("org.postgresql.Driver");
-    }
-
-    @SneakyThrows
-    public static Connection get() {
-        return DriverManager.getConnection(
-                PropertiesManager.get(URL),
-                PropertiesManager.get(USERNAME),
-                PropertiesManager.get(PASSWORD));
-    }
-*/
-
     public static Connection get() throws SQLException {
 
         PoolProperties poolProperties = new PoolProperties();

@@ -9,9 +9,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
@@ -68,11 +66,11 @@ public class CourseDao {
 
 
     @SneakyThrows
-    public boolean delete(Course course) {
+    public boolean delete(Integer id) {
         boolean result = false;
         try (Connection connection = ConnectionManager.get();
              PreparedStatement preparedStatement = connection.prepareStatement(DELETE)) {
-            preparedStatement.setInt(1, course.getId());
+            preparedStatement.setInt(1, id);
             if (preparedStatement.executeUpdate() == 1) {
                 result = true;
             }
@@ -81,16 +79,16 @@ public class CourseDao {
     }
 
     @SneakyThrows
-    public Set<Course> getAllCourse() {
-        Set<Course> set = new HashSet<>();
+    public List<Course> getAllCourse() {
+        List<Course> list = new ArrayList<>();
         try (Connection connection = ConnectionManager.get();
              PreparedStatement preparedStatement = connection.prepareStatement(COURSE_GET_ALL)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                set.add(BuildEntity.buildCource(resultSet));
+                list.add(BuildEntity.buildCource(resultSet));
             }
         }
-        return set;
+        return list;
     }
 
     @SneakyThrows
@@ -98,7 +96,6 @@ public class CourseDao {
         try (Connection connection = ConnectionManager.get();
              PreparedStatement preparedStatement =
                      connection.prepareStatement(CREATE, RETURN_GENERATED_KEYS)) {
-            //type_id, start_date, duration_hours, name, description, plan
             preparedStatement.setInt(1, course.getType().getId());
             preparedStatement.setDate(2, Date.valueOf(course.getStartDate()));
             preparedStatement.setInt(3, course.getDuration());

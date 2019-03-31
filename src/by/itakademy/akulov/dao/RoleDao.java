@@ -8,9 +8,7 @@ import by.itakademy.akulov.utils.BuildEntity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
@@ -27,6 +25,11 @@ public class RoleDao {
                     "FROM role " +
                     "WHERE id = ?";
 
+    private final String GET_BY_NAME =
+            "SELECT id, name " +
+                    "FROM role " +
+                    "WHERE name = ?";
+
     private final String CREATE =
             "INSERT INTO role (name)" +
                     "VALUES (?);";
@@ -36,16 +39,16 @@ public class RoleDao {
                     "WHERE id = ?;";
 
     @SneakyThrows
-    public Set<Role> getAll() {
-        Set<Role> set = new HashSet<>();
+    public List<Role> getAll() {
+        List<Role> list = new ArrayList<>();
         try (Connection connection = ConnectionManager.get();
              PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                set.add(BuildEntity.buildRole(resultSet));
+                list.add(BuildEntity.buildRole(resultSet));
             }
         }
-        return set;
+        return list;
     }
 
     @SneakyThrows
@@ -54,6 +57,20 @@ public class RoleDao {
         try (Connection connection = ConnectionManager.get();
              PreparedStatement preparedStatement = connection.prepareStatement(GET_BY_ID)) {
             preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                role = BuildEntity.buildRole(resultSet);
+            }
+        }
+        return Optional.ofNullable(role);
+    }
+
+    @SneakyThrows
+    public Optional<Role> getEntityByName(String name) {
+        Role role = null;
+        try (Connection connection = ConnectionManager.get();
+             PreparedStatement preparedStatement = connection.prepareStatement(GET_BY_NAME)) {
+            preparedStatement.setString(1, name);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 role = BuildEntity.buildRole(resultSet);
